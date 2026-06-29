@@ -6,9 +6,9 @@ Replication of Goel, Pasricha & Kanniainen (2025) and a Beta–Volatility extens
 
 ```
 .
-├── TDA_Final.ipynb                    # Full implementation
-├── Asian Option Pricing with SPD.pdf  # Full project report
-└── README.md
+├── README.md 
+├── TDA_Final.ipynb   #Full implementation
+└── TDA Final.pdf  #Full project report
 ```
 
 ## Method
@@ -21,7 +21,7 @@ min_w  ||R_in * w - r0_in||² + Σ aᵢ|wᵢ| + Σ bᵢ²wᵢ²   s.t. 1ᵀw = 1
 
 What differs is how `aᵢ` and `bᵢ` are constructed.
 
-**TDA models** — penalty coefficients are L¹ norms of persistence landscapes computed from Takens-embedded return sub-series via Vietoris–Rips filtration and GUDHI:
+**TDA models** - penalty coefficients are L¹ norms of persistence landscapes computed from Takens-embedded return sub-series via Vietoris–Rips filtration and GUDHI:
 
 | Model | aᵢ | bᵢ |
 |---|---|---|
@@ -49,7 +49,7 @@ Rolling windows: 504-day in-sample, 21-day out-of-sample, step 21 days. Data fro
 | BetaVol | 0.008579 | 0.9469 | 18.60% | 0.145 |
 | Vol-EN11 | 0.007474 | 0.7720 | 13.73% | 0.190 |
 
-TDA models win on tracking accuracy and benchmark correlation. BetaVol produces higher returns and lower turnover but wider drawdowns and tail risk. The two penalty systems are not measuring the same thing — TDA H0 and inverse-beta have Spearman correlation of −0.54 in Period I, while TDA H1 and volatility correlate at +0.57.
+TDA models win on tracking accuracy and benchmark correlation. BetaVol produces higher returns and lower turnover but wider drawdowns and tail risk. The two penalty systems are not measuring the same thing — TDA H0 and inverse-beta have Spearman correlation of −0.54 in Period I, while TDA H1 and volatility correlate.
 
 ## Setup
 
